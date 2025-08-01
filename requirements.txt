@@ -1,9 +1,13 @@
-langchain==0.3.26
 flask==3.1.1
+gunicorn==21.2.0        # required for deployment
+langchain==0.3.26
 sentence-transformers==4.1.0
 pypdf==5.6.1
 python-dotenv==1.1.0
 langchain-pinecone==0.2.8
 langchain-openai==0.3.24
 langchain-community==0.3.26
--e .
+google-generativeai==0.4.1    # Gemini model SDK
+protobuf==4.25.3              # required for google SDK sometimes
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch                          # required for sentence-transformers
